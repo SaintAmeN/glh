@@ -1,0 +1,42 @@
+{
+  "navigator.home.page": "Home Page",
+  "navigator.countries": "Countries",
+  "navigator.countries.attributes": "Countries attributes",
+  "navigator.link": {
+    "back": "Back",
+    "add": "Add"
+  },
+  "label": {
+    "country": {
+      "name": "Country name:"
+    },
+    "attribute": {
+      "name_english": "Attribute name [English]:",
+      "name_polish": "Attribute name [Polish]:",
+      "name_ukrainian": "Attribute name [Ukrainian]:"
+    },
+    "clear": "Clear form",
+    "submit": "Submit"
+  },
+  "form": {
+    "country": "Form Country:",
+    "attribute": "Form country attributes:"
+  },
+  "list": {
+    "country": {
+      "list": "List of Countries",
+      "id": "Id",
+      "name": "Name"
+    },
+    "attribute": {
+      "list": "List of Attributes",
+      "id": "Id",
+      "name": "Name"
+    }
+  },
+  "notifications": {
+    "record": {
+      "added": "Wpis został dodany"
+    }
+  }
+}

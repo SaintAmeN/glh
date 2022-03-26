@@ -1,0 +1,26 @@
+<div>
+  <div class="page-header" >
+    <h1 [translate]="'form.attributevalue'"></h1>
+  </div>
+  <div class="page-content">
+    <div class="form-group">
+      <label for="country.name" [translate]="'label.attributevalue.name'"></label>
+      <input
+        type="text"
+        class="form-control"
+        id="country.name"
+        [(ngModel)]="taxationAttributeValue.attribute_value"
+        required
+        [disabled]="!formActive"
+      />
+    </div>
+    <div class="button-row">
+      <button type="button" class="btn btn-warning col-3" (click)="clear()" [translate]="'label.clear'"></button>
+      <button type="button" class="btn btn-primary offset-6 col-3" (click)="send()" [translate]="'label.submit'"></button>
+    </div>
+    <!-- </form> -->
+  </div>
+  <div *ngIf="notification!=null" class="page-notification alert alert-dark" role="alert">
+    <p [translate]="'notifications.record.added'"></p>
+  </div>
+</div>

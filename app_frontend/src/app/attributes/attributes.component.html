@@ -1,0 +1,32 @@
+<div class="d-flex flex-column">
+  <div class="d-flex flex-row w-100">
+    <div class="d-flex flex-row w-100">
+      <a [routerLink]="['/home']">
+        <button class="btn btn-secondary" [translate]="'navigator.link.back'"></button>
+      </a>
+    </div>
+    <div class="d-flex flex-row-reverse">
+      <a [routerLink]="['attributes-form']">
+        <button class="btn btn-secondary" [translate]="'navigator.link.add'"></button>
+      </a>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="page-header" [translate]="'list.attribute.list'"></div>
+  <div class="page-content">
+    <div class="table">
+      <div class="header">
+        <div class="header-column col-md-1" [translate]="'list.attribute.id'"></div>
+        <div class="header-column col-md-6" [translate]="'list.attribute.name'"></div>
+        <div class="header-column col-md-2 clr"></div>
+      </div>
+      <div class="item-row" *ngFor="let attribute of taxationAttributes">
+        <div class="item-column col-md-1">{{ attribute.benchmarkAttributeId }}</div>
+        <div class="item-column col-md-6">{{ attribute.name_english }}</div>
+        <div class="item-column col-md-2 clr">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

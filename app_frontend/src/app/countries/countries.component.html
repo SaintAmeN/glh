@@ -1,0 +1,32 @@
+<div class="d-flex flex-column">
+  <div class="d-flex flex-row w-100">
+    <div class="d-flex flex-row w-100">
+      <a [routerLink]="['/home']">
+        <button class="btn btn-secondary" [translate]="'navigator.link.back'"></button>
+      </a>
+    </div>
+    <div class="d-flex flex-row-reverse">
+      <a [routerLink]="['countries-form']">
+        <button class="btn btn-secondary" [translate]="'navigator.link.add'"></button>
+      </a>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="page-header" [translate]="'list.country.list'"></div>
+  <div class="page-content">
+    <div class="table">
+      <div class="header">
+        <div class="header-column col-md-1" [translate]="'list.country.id'"></div>
+        <div class="header-column col-md-2" [translate]="'list.country.name'"></div>
+        <div class="header-column col-md-2 clr"></div>
+      </div>
+      <div class="item-row" *ngFor="let country of taxationCountries">
+        <div class="item-column col-md-1">{{ country.id }}</div>
+        <div class="item-column col-md-2">{{ country.name }}</div>
+        <div class="item-column col-md-2 clr">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

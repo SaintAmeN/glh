@@ -1,0 +1,32 @@
+.logo{
+  height: 64px;
+  margin: 0 6px 0 2px;
+}
+.menu-item-colored-active{
+  border-bottom: 1px darkblue solid;
+  padding: 3px;
+}
+.menu-item-colored-active:hover{
+  color: darkblue !important;
+  background-color: rgba(0, 0, 139, 0.2);
+}
+
+.container-content{
+  min-height: 80vh;
+  background-color: #efefef;
+}
+
+.padding-top-two{
+  padding-top: 2px !important;
+}
+
+.m-lr-5 {
+  margin-top:0;
+  margin-botton:0;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.background-navigator{
+  /*background-color: rgba(0, 0, 139, 0.05);*/
+}

@@ -1,0 +1,43 @@
+{
+  "navigator.home.page": "Домашня сторінка",
+  "navigator.countries": "країни",
+  "navigator.countries.attributes": "Показники країн",
+  "navigator.link": {
+    "back": "Назад",
+    "add": "Додати"
+  },
+  "label": {
+    "country": {
+      "name": "Назва країни:"
+    },
+    "attribute": {
+      "name_english": "Назва атрибута [англійська]:",
+      "name_polish": "Назва атрибута [Польща]:",
+      "name_ukrainian": "Назва атрибута [український]:"
+    },
+    "clear": "Чітка форма",
+    "submit": "Надіслати"
+  },
+  "form": {
+    "country": "Форма додавання країни",
+    "attribute": "Форма для додавання показників"
+  },
+  "list": {
+    "country": {
+      "list": "Список країн",
+      "id": "Id",
+      "name": "ім'я"
+    },
+    "attribute": {
+      "list": "Список атрибутів",
+      "id": "Id",
+      "name": "ім'я"
+
+    }
+  },
+  "notifications": {
+    "record": {
+      "added": "Запис додано"
+    }
+  }
+}

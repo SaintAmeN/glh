@@ -1,0 +1,42 @@
+{
+  "navigator.home.page": "Strona Główna",
+  "navigator.countries": "Kraje",
+  "navigator.countries.attributes": "Wskaźniki Krajów",
+  "navigator.link":{
+    "back": "Wróć",
+    "add": "Dodaj"
+  },
+  "label": {
+    "country": {
+      "name": "Nazwa kraju:"
+    },
+    "attribute": {
+      "name_english": "Nazwa atrybutu [Angielska]:",
+      "name_polish": "Nazwa atrybutu [Polska]:",
+      "name_ukrainian": "Nazwa atrybutu [Ukraińska]:"
+    },
+    "clear": "Wyczyść formularz",
+    "submit": "Wyślij"
+  },
+  "form": {
+    "country": "Formularz dodawania kraju",
+    "attribute": "Formularz dodawania wkaźników"
+  },
+  "list": {
+    "country": {
+      "list": "Lista krajów",
+      "id": "Lp",
+      "name": "Nazwa"
+    },
+    "attributes": {
+      "list": "Lista atrybutów",
+      "id": "Lp",
+      "name": "Nazwa"
+    }
+  },
+  "notifications": {
+    "record": {
+      "added": "Wpis został dodany"
+    }
+  }
+}

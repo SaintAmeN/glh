@@ -1,0 +1,47 @@
+<div>
+  <div class="page-header" >
+    <h1 [translate]="'form.attribute'"></h1>
+  </div>
+  <div class="page-content">
+    <div class="form-group">
+      <label for="attribute_name_english" [translate]="'label.attribute.name_english'"></label>
+      <input
+        type="text"
+        class="form-control"
+        id="attribute_name_english"
+        [(ngModel)]="taxationAttribute.name_english"
+        required
+        [disabled]="!formActive"
+      />
+    </div>
+    <div class="form-group">
+      <label for="attribute_name_polish" [translate]="'label.attribute.name_polish'"></label>
+      <input
+        type="text"
+        class="form-control"
+        id="attribute_name_polish"
+        [(ngModel)]="taxationAttribute.name_polish"
+        required
+        [disabled]="!formActive"
+      />
+    </div>
+    <div class="form-group">
+      <label for="attribute_name_ukrainian" [translate]="'label.attribute.name_ukrainian'"></label>
+      <input
+        type="text"
+        class="form-control"
+        id="attribute_name_ukrainian"
+        [(ngModel)]="taxationAttribute.name_ukrainian"
+        required
+        [disabled]="!formActive"
+      />
+    </div>
+    <div class="button-row">
+      <button type="button" class="btn btn-warning col-3" (click)="clear()" [translate]="'label.clear'"></button>
+      <button type="button" class="btn btn-primary offset-6 col-3" (click)="send()" [translate]="'label.submit'"></button>
+    </div>
+  </div>
+  <div *ngIf="notification!=null" class="page-notification alert alert-dark" role="alert">
+    <p [translate]="'notifications.record.added'"></p>
+  </div>
+</div>
