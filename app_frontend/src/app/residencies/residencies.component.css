@@ -5,6 +5,10 @@
 
 .page-content{
   margin-top:10px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .header{
@@ -55,32 +59,21 @@
   border-color: #dc3545 ;
 }
 
-.top-row-two-split{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.top-row-left-split{
-  display: flex;
-  flex-direction: row;
-  width: 50%;
-  height: 100%;
-  margin: auto;
-  flex-grow: 1;
-}
-
-.top-row-right-split{
-  align-items: start;
-  justify-content: start;
+.residency-single-test{
+  margin: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 40%;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  width: 50%;
+  padding: 10px 5px 3px 5px;
 }
-.form-group{
-  width: 100%;
+
+.centered{
+  margin: auto;
+  width: inherit;
+  max-width: 145px;
 }
-.max-390{
-  max-width: 390px;
+.inherited{
+  width: inherit;
 }

@@ -9,9 +9,18 @@ import {HttpClient} from "@angular/common/http";
 })
 export class AttributesComponent implements OnInit {
   taxationAttributes: TaxationAttributeDto[];
+  language: string;
+
 
   constructor(private http: HttpClient) {
     this.taxationAttributes = [];
+
+    let lang = localStorage.getItem('currentLanguageSet')
+    if (lang) {
+      this.language = lang;
+    } else {
+      this.language = 'en';
+    }
   }
 
   ngOnInit(): void {

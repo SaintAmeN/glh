@@ -14,6 +14,9 @@ import { CountriesFormComponent } from './countries/countries-form/countries-for
 import { CountriesDetailsComponent } from './countries/countries-details/countries-details.component';
 import { AttributesComponent } from './attributes/attributes.component';
 import { CountriesAttributesFormComponent } from './countries/countries-attributes-form/countries-attributes-form.component';
+import { ResidenciesComponent } from './residencies/residencies.component';
+import { ResidencyTestComponent } from './residencies/residency-test/residency-test.component';
+import { ResidencyTestResultComponent } from './residencies/residency-test-result/residency-test-result.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { CountriesAttributesFormComponent } from './countries/countries-attribut
     CountriesDetailsComponent,
     AttributesComponent,
     CountriesAttributesFormComponent,
+    ResidenciesComponent,
+    ResidencyTestComponent,
+    ResidencyTestResultComponent,
   ],
   imports: [
     BrowserModule,

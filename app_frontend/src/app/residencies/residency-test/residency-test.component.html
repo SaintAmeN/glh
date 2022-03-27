@@ -1,0 +1,21 @@
+<div *ngIf="form">
+  <div class="page-header" [translate]="'navigator.residencies'"></div>
+  <div class="page-content">
+    <img class="paddless centered" src="https://flagcdn.com/h240/{{form.countryCode}}.png">
+  </div>
+
+  <div class="residency-test-question-container" *ngIf="currentQuestion">
+    <div class="residency-test-question">
+      {{currentQuestion.question}}
+    </div>
+    <hr>
+    <div class="residency-test-answers">
+      <div class="residency-test-single-answer" *ngFor="let answer of currentQuestion.answers">
+        <button class="form-control" (click)="questionAnswered(answer.resultResidency)">
+          {{answer.content}}
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

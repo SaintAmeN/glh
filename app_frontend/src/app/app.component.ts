@@ -42,5 +42,6 @@ export class AppComponent {
 
   useLanguage(language: string): void {
     this.setLanguage(language);
+    window.location.reload();
   }
 }

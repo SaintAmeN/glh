@@ -1,6 +1,12 @@
 {
+  "overview": "This application has been development as a part of GLH 2022. The key features are:",
+  "overview1": "Guide users through taxlaw in different countries(global scope) and to helpthem grasp the similarities between taxation systems in terms of the users life situation.\n",
+  "overview2": "Work as a knowledgeaggregator of globalbusiness start-up",
+  "overview3": "Benefit the societythrough providinginterpertation of legalwritings in plainlanguage",
+  "overview4": "Provide CMS and CRMplatform service forBusiness Client",
   "navigator.home.page": "Home Page",
   "navigator.countries": "Countries",
+  "navigator.residencies": "Residency test",
   "navigator.countries.attributes": "Countries attributes",
   "navigator.link": {
     "back": "Back",
@@ -44,7 +50,15 @@
   },
   "notifications": {
     "record": {
-      "added": "Wpis został dodany"
+      "added": "Entry added"
     }
+  },
+  "test": {
+    "residency": "Take residency test",
+    "result": "Result of Your residency test:",
+    "nonresident": "You are not resident",
+    "resident": "You are resident",
+    "residentnotice": "As a result of analysis, based on the answers you have provided, it can be assumed with a high degree of probability that you should be clasified as RESIDENT of the UK for tax purposes. However, remember that the final decision depends on the tax authorities discretion. Therefore, to confirm your status you should contact the relevant tax authorities for further instructions or a qualified tax advisor for a tax opinion.",
+    "nonresidentnotice": "As a result of analysis, based on the answers you have provided, it can be assumed with a high degree of probability that you should be clasified as a NON-RESIDENT of the UK for tax purposes. However, remember that the final decision depends on the tax authorities discretion. Therefore, to confirm your status you should contact the relevant tax authorities for further instructions or a qualified tax advisor for a tax opinion."
   }
 }

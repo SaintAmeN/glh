@@ -34,4 +34,9 @@ public class TaxationCountry {
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Set<TaxationIncomeType> incomeType;
+
+    @OneToMany(mappedBy = "country", fetch = FetchType.EAGER)
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private Set<ResidencyQuestion> residencyQuestions;
 }

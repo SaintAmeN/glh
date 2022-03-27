@@ -1,6 +1,12 @@
 {
+  "overview": "Aplikacja ta została opracowana w ramach projektu GLH 2022. Główne cechy aplikacji to:",
+  "overview1": "Przeprowadzenie użytkowników przez prawo podatkowe w różnych krajach (zakres globalny) i pomoc w zrozumieniu podobieństw między systemami podatkowymi w kontekście sytuacji życiowej użytkowników.",
+  "overview2": "Praca w charakterze agregatora wiedzy na temat rozpoczynania działalności gospodarczej na świecie",
+  "overview3": "Przynieść korzyści społeczeństwu poprzez dostarczanie wyjaśnień pism prawnych w prostym języku.",
+  "overview4": "Zapewnienie obsługi platformy CMS i CRM dla klienta biznesowego",
   "navigator.home.page": "Strona Główna",
   "navigator.countries": "Kraje",
+  "navigator.residencies": "Test rezydencji",
   "navigator.countries.attributes": "Wskaźniki Krajów",
   "navigator.link":{
     "back": "Wróć",
@@ -46,5 +52,13 @@
     "record": {
       "added": "Wpis został dodany"
     }
+  },
+  "test": {
+    "residency": "Wykonaj test rezydencji",
+    "result": "Wynik testu rezydencji",
+    "resident": "Jesteś rezydentem danego kraju",
+    "nonresident":"Nie jesteś rezydentem danego kraju",
+    "residentnotice": "W wyniku przeprowadzonej analizy na podstawie odpowiedzi, które udzieliłeś, można z dużym prawdopodobieństwem założyć, że JESTEŚ REZYDENTEM PODATKOWYM Wielkiej Brytanii. Pamiętaj jednak, że ostateczna decyzja zależy od uznania przez organy podatkowe. Dlatego aby potwierdzić swój status powinieneś zgłosić się do właściwych organów podatkowych po dalsze instrukcje bądź do wykwalifikowanego doradcy podatkowego po opinię podatkową.",
+    "nonresidentnotice": "W wyniku przeprowadzonej analizy na podstawie odpowiedzi, które udzieliłeś, można z dużym prawdopodobieństwem założyć, że JESTEŚ NIEREZYDENTEM PODATKOWYM Wielkiej Brytanii. Pamiętaj jednak, że ostateczna decyzja zależy od uznania przez organy podatkowe. Dlatego aby potwierdzić swój status powinieneś zgłosić się do właściwych organów podatkowych po dalsze instrukcje bądź do wykwalifikowanego doradcy podatkowego po opinię podatkową."
   }
 }

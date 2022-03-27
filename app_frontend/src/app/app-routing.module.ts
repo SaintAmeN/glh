@@ -7,6 +7,9 @@ import {CountriesFormComponent} from "./countries/countries-form/countries-form.
 import {CountriesDetailsComponent} from "./countries/countries-details/countries-details.component";
 import {AttributesComponent} from "./attributes/attributes.component";
 import {CountriesAttributesFormComponent} from "./countries/countries-attributes-form/countries-attributes-form.component";
+import {ResidenciesComponent} from "./residencies/residencies.component";
+import {ResidencyTestComponent} from "./residencies/residency-test/residency-test.component";
+import {ResidencyTestResultComponent} from "./residencies/residency-test-result/residency-test-result.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,6 +20,9 @@ const routes: Routes = [
   {path: "countries/attributes-form/:id", component: CountriesAttributesFormComponent},
   {path: "attributes/attributes-form", component: AttributesFormComponent},
   {path: "attributes", component: AttributesComponent},
+  {path: "residencies", component: ResidenciesComponent},
+  {path: "residencies/test/:code", component: ResidencyTestComponent},
+  {path: "residencies/test/result/:result/:countryCode", component: ResidencyTestResultComponent},
   { path: '**', redirectTo: 'not-found', pathMatch: 'full' }
 ];
 

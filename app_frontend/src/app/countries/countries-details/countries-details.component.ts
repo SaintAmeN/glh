@@ -41,6 +41,8 @@ export class CountriesDetailsComponent implements OnInit {
       this.taxationCountry = data as TaxationCountryDetailsDto;
       this.taxationCountryName = this.taxationCountry.name;
       console.log(this.taxationCountry)
+
+      this.taxationCountry.attributes.sort((a,b) => (a.benchmarkAttributeId > b.benchmarkAttributeId) ? 1 : ((b.benchmarkAttributeId > a.benchmarkAttributeId) ? -1 : 0))
     });
   }
 }

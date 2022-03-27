@@ -23,7 +23,9 @@
       </div>
       <div class="item-row" *ngFor="let attribute of taxationAttributes">
         <div class="item-column col-md-1">{{ attribute.benchmarkAttributeId }}</div>
-        <div class="item-column col-md-6">{{ attribute.name_english }}</div>
+        <div class="item-column col-md-6" *ngIf="language=='en'">{{ attribute.name_english }}</div>
+        <div class="item-column col-md-6" *ngIf="language=='pl'">{{ attribute.name_polish }}</div>
+        <div class="item-column col-md-6" *ngIf="language=='ua'">{{ attribute.name_ukrainian }}</div>
         <div class="item-column col-md-2 clr">
         </div>
       </div>

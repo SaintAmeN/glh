@@ -1,0 +1,17 @@
+<div *ngIf="result != null">
+  <div class="page-header" [translate]="'navigator.residencies'"></div>
+  <div class="page-content">
+    <img class="paddless centered" src="https://flagcdn.com/h240/{{countryCode}}.png">
+  </div>
+
+  <div class="result-communicate">
+    <h2 class="result-communicate-centered" [translate]="'test.result'">
+    </h2>
+    <h2 class="result-communicate-centered"  [translate]="'test.nonresident'" *ngIf="!result"></h2>
+    <h2 class="result-communicate-centered" [translate]="'test.resident'" *ngIf="result"></h2>
+
+    <hr>
+    <p [translate]="'test.residentnotice'"  *ngIf="result"></p>
+    <p [translate]="'test.nonresidentnotice'" *ngIf="!result"></p>
+  </div>
+</div>

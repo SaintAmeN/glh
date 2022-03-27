@@ -7,4 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface TaxationCountryRepository extends JpaRepository<TaxationCountry, Long> {
+    Optional<TaxationCountry> findByCode(String code);
 }

@@ -31,3 +31,20 @@ export type TaxationAttributeValueDto = {
   name_ukrainian: string;
   value: string;
 };
+
+export type ResidencyFormDto = {
+  countryCode: string;
+  questions: ResidencyFormQuestionDto[];
+}
+
+export type ResidencyFormQuestionDto = {
+  order: number;
+  question: string;
+
+  answers: ResidencyFormAnswerDto[];
+}
+
+export type ResidencyFormAnswerDto = {
+  content : string;
+  resultResidency: any;
+}

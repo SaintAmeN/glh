@@ -1,0 +1,11 @@
+<div>
+  <div class="page-header" [translate]="'test.residency'"></div>
+  <div class="page-content">
+    <div class="residency-single-test" *ngFor="let test of tests">
+      <a [routerLink]="['test/'+test.code]">
+        <img class="paddless centered" src="https://flagcdn.com/h240/{{test.code}}.png">
+      </a>
+      <span>{{test.country}}</span>
+    </div>
+  </div>
+</div>
