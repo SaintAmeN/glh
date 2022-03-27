@@ -4,13 +4,16 @@
   "navigator.countries.attributes": "Wskaźniki Krajów",
   "navigator.link":{
     "back": "Wróć",
-    "add": "Dodaj"
+    "add": "Dodaj",
+    "details": "Details"
   },
   "label": {
     "country": {
-      "name": "Nazwa kraju:"
+      "name": "Nazwa kraju:",
+      "code": "Kod kraju:"
     },
     "attribute": {
+      "name":"Nazwa atrybutu",
       "name_english": "Nazwa atrybutu [Angielska]:",
       "name_polish": "Nazwa atrybutu [Polska]:",
       "name_ukrainian": "Nazwa atrybutu [Ukraińska]:"
@@ -20,18 +23,23 @@
   },
   "form": {
     "country": "Formularz dodawania kraju",
-    "attribute": "Formularz dodawania wkaźników"
+    "attribute": "Formularz dodawania wkaźników",
+    "attributevalue": "Formularz dodawania wartości wskaźników"
   },
   "list": {
     "country": {
+      "details": "Szczegółowe informacje o kraju: {{value}}",
       "list": "Lista krajów",
       "id": "Lp",
-      "name": "Nazwa"
+      "name": "Nazwa",
+      "code": "Kod kraju",
+      "flag": "Flaga"
     },
-    "attributes": {
-      "list": "Lista atrybutów",
+    "attribute": {
+      "list": "Lista atrybutów/wskaźników",
       "id": "Lp",
-      "name": "Nazwa"
+      "name": "Nazwa",
+      "value": "Wartość"
     }
   },
   "notifications": {

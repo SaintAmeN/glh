@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {TaxationCountryDto} from "../../services/models";
+import {TaxationCountryDetailsDto, TaxationCountryDto} from "../../services/models";
 import {HttpClient} from "@angular/common/http";
 
 @Component({
@@ -10,15 +10,26 @@ import {HttpClient} from "@angular/common/http";
 })
 export class CountriesDetailsComponent implements OnInit {
   countryId: number;
-  taxationCountry: TaxationCountryDto | null;
+  taxationCountryName: string | null;
+  taxationCountry: TaxationCountryDetailsDto | null;
+  language: string;
 
   constructor(private ActivatedRoute: ActivatedRoute, private http: HttpClient) {
+    this.taxationCountryName = '';
+    this.taxationCountry = null;
     let idString = this.ActivatedRoute.snapshot.paramMap.get("id")
     if (idString) {
       this.countryId = parseInt(idString, 10);
+    } else {
+      this.countryId = 0;
     }
-    this.countryId = 0;
-    this.taxationCountry = null;
+
+    let lang = localStorage.getItem('currentLanguageSet')
+    if (lang) {
+      this.language = lang;
+    } else {
+      this.language = 'en';
+    }
   }
 
   ngOnInit(): void {
@@ -27,7 +38,9 @@ export class CountriesDetailsComponent implements OnInit {
 
   refreshDetails() {
     this.http.get('http://localhost:8080/countries/' + this.countryId).subscribe((data) => {
-      this.taxationCountry = data as TaxationCountryDto;
+      this.taxationCountry = data as TaxationCountryDetailsDto;
+      this.taxationCountryName = this.taxationCountry.name;
+      console.log(this.taxationCountry)
     });
   }
 }

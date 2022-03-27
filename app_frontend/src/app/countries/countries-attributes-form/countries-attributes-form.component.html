@@ -1,14 +1,41 @@
-<div>
+<div *ngIf="taxationCountryName!=null">
   <div class="page-header" >
-    <h1 [translate]="'form.attributevalue'"></h1>
+    <h1 [translate]="'form.attributevalue'" [translateParams]="{value:taxationCountryName}"></h1>
   </div>
   <div class="page-content">
     <div class="form-group">
-      <label for="country.name" [translate]="'label.attributevalue.name'"></label>
+      <label for="country.name" [translate]="'label.country.name'"></label>
       <input
         type="text"
         class="form-control"
         id="country.name"
+        [(ngModel)]="taxationCountryName"
+        required
+        [readOnly]="true"
+      />
+    </div>
+    <div class="form-group">
+      <label for="attribute.id" [translate]="'label.attribute.name'"></label>
+      <select class="form-control" id="attribute.id" [(ngModel)]="taxationAttributeValue.attribute_id">
+        <option *ngFor="let attribute of taxationAttributes" [value]="attribute.benchmarkAttributeId">
+          <p *ngIf="language=='en'">
+            {{attribute.name_english}}
+          </p>
+          <p *ngIf="language=='pl'">
+            {{attribute.name_polish}}
+          </p>
+          <p *ngIf="language=='ua'">
+            {{attribute.name_ukrainian}}
+          </p>
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="attribute.value" [translate]="'list.attribute.value'"></label>
+      <input
+        type="text"
+        class="form-control"
+        id="attribute.value"
         [(ngModel)]="taxationAttributeValue.attribute_value"
         required
         [disabled]="!formActive"

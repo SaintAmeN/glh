@@ -21,4 +21,5 @@ public class BenchmarkAttribute {
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     private Set<BenchmarkAttributeTranslation> translations;
+
 }

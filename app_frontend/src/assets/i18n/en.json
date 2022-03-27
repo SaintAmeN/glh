@@ -4,13 +4,16 @@
   "navigator.countries.attributes": "Countries attributes",
   "navigator.link": {
     "back": "Back",
-    "add": "Add"
+    "add": "Add",
+    "details": "Details"
   },
   "label": {
     "country": {
-      "name": "Country name:"
+      "name": "Country name:",
+      "code": "Country code:"
     },
     "attribute": {
+      "name":"Attribute name",
       "name_english": "Attribute name [English]:",
       "name_polish": "Attribute name [Polish]:",
       "name_ukrainian": "Attribute name [Ukrainian]:"
@@ -20,18 +23,23 @@
   },
   "form": {
     "country": "Form Country:",
-    "attribute": "Form country attributes:"
+    "attribute": "Form country attributes:",
+    "attributevalue": "Country [{{value}}] attribute form:"
   },
   "list": {
     "country": {
+      "details": "Details of a country: {{value}}",
       "list": "List of Countries",
       "id": "Id",
-      "name": "Name"
+      "name": "Name",
+      "code": "Country code",
+      "flag": "Flag"
     },
     "attribute": {
       "list": "List of Attributes",
       "id": "Id",
-      "name": "Name"
+      "name": "Name",
+      "value": "Value"
     }
   },
   "notifications": {

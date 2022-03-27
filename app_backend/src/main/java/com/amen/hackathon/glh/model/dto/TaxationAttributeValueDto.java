@@ -1,5 +1,6 @@
 package com.amen.hackathon.glh.model.dto;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,8 +10,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class TaxationCountryDto {
-    private Long id;
-    private String name;
-    private String code;
+public class TaxationAttributeValueDto {
+    private Long benchmarkAttributeId;
+    private String name_english;
+    private String name_polish;
+    private String name_ukrainian;
+    private String value;
 }

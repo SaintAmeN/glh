@@ -16,12 +16,13 @@ public class TaxationCountry {
     private Long id;
 
     private String name;
+    private String code;
 
     /**
      * One country can have multiple attributes.
      * Attributes are shared, values are not.
      */
-    @ManyToMany
+    @OneToMany(mappedBy = "country")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Set<BenchmarkAttributeValue> attributes;

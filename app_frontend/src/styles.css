@@ -26,5 +26,14 @@ body {
 }
 
 Button{
-  /*border-radius: 0 !important;*/
+  border-radius: 0 !important;
+  min-width: 130px;
+}
+input{
+  border-radius: 0 !important;
+  /*margin-left: 6px !important;*/
+  /*margin-right: 6px !important;*/
+}
+.paddless{
+  padding: 0 !important;
 }

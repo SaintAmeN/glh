@@ -1,14 +1,8 @@
 package com.amen.hackathon.glh.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Builder
@@ -32,4 +26,14 @@ public class BenchmarkAttributeValue {
     private int year;
 
     private String value;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private BenchmarkAttribute attribute;
+
+    @ManyToOne()
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
+    private TaxationCountry country;
 }

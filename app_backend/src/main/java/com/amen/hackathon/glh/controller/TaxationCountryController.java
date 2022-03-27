@@ -1,5 +1,7 @@
 package com.amen.hackathon.glh.controller;
 
+import com.amen.hackathon.glh.model.dto.TaxationAttributeValueRequestDto;
+import com.amen.hackathon.glh.model.dto.TaxationCountryDetailsDto;
 import com.amen.hackathon.glh.model.dto.TaxationCountryDto;
 import com.amen.hackathon.glh.service.TaxationCountryService;
 import lombok.RequiredArgsConstructor;
@@ -20,8 +22,19 @@ public class TaxationCountryController {
         return taxationCountryService.getCountries();
     }
 
+    @GetMapping("/{id}")
+    public TaxationCountryDetailsDto get(@PathVariable() Long id){
+        log.info("Getting country with id: " + id);
+        return taxationCountryService.getCountry(id);
+    }
+
     @PostMapping()
     public void post(@RequestBody TaxationCountryDto dto){
         taxationCountryService.saveCountry(dto);
+    }
+
+    @PostMapping("/attribute")
+    public void post(@RequestBody TaxationAttributeValueRequestDto dto){
+        taxationCountryService.saveAttributeValue(dto);
     }
 }

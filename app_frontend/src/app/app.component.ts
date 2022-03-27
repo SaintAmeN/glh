@@ -13,14 +13,21 @@ interface Locale {
 })
 export class AppComponent {
   title = 'app_frontend_';
+
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
+    let currentLanguageSet = localStorage.getItem('currentLanguageSet')
+    if (currentLanguageSet != null) {
+      this.setLanguage(currentLanguageSet);
+    } else {
+      translate.setDefaultLang('en');
+    }
+
   }
 
   locales: Locale[] = [
-    { localeCode: 'en', label: 'English' },
-    { localeCode: 'pl', label: 'Polski'},
-    { localeCode: 'ua', label: 'Ukrainian' },
+    {localeCode: 'en', label: 'English'},
+    {localeCode: 'pl', label: 'Polski'},
+    {localeCode: 'ua', label: 'Ukrainian'},
   ];
 
   currentDate: number = Date.now();
@@ -28,7 +35,12 @@ export class AppComponent {
   ngOnInit(): void {
   }
 
-  useLanguage(language: string): void {
+  setLanguage(language: string): void {
     this.translate.use(language);
+    localStorage.setItem('currentLanguageSet', language);
+  }
+
+  useLanguage(language: string): void {
+    this.setLanguage(language);
   }
 }

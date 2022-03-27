@@ -11,12 +11,14 @@ public interface TaxationCountryMapper {
     @Mappings({
             @Mapping(target = "id", source = "id"),
             @Mapping(target = "name", source = "name"),
+            @Mapping(target = "code", source = "code"),
     })
     TaxationCountryDto taxationCountryToDto(TaxationCountry entity);
 
     @Mappings({
             @Mapping(target = "id", source = "id"),
             @Mapping(target = "name", source = "name"),
+            @Mapping(target = "code", source = "code"),
     })
     TaxationCountry taxationCountryDtoToEntity(TaxationCountryDto dto);
 }

@@ -19,7 +19,6 @@ export class CountriesComponent implements OnInit {
   }
 
   refreshList() {
-    // http://localhost:8080/offers GET -> lista ofert
     this.http.get('http://localhost:8080/countries').subscribe((data) => {
       let list = data as TaxationCountryDto[];
       this.taxationCountries = list;

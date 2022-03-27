@@ -1,1 +1,87 @@
-<p>countries-details works!</p>
+<div class="d-flex flex-column">
+  <div class="d-flex flex-row w-100">
+    <div class="d-flex flex-row w-100">
+      <a [routerLink]="['/countries']">
+        <button class="btn btn-secondary" [translate]="'navigator.link.back'"></button>
+      </a>
+    </div>
+    <div class="d-flex flex-row-reverse">
+    </div>
+  </div>
+</div>
+<div>
+  <div class="page-header" [translate]="'list.country.details'" [translateParams]="{value: taxationCountryName}"></div>
+  <div class="page-content" *ngIf="taxationCountry">
+    <div class="top-row-two-split">
+      <div class="top-row-left-split">
+        <img
+          class="paddless"
+          src="https://flagcdn.com/h240/{{taxationCountry.code}}.png">
+      </div>
+      <div class="top-row-right-split">
+        <div class="form-group">
+          <label for="country.name" [translate]="'label.country.name'"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="country.name"
+            [(ngModel)]="taxationCountry.name"
+            required
+            [disabled]="true"
+          />
+        </div>
+        <div class="form-group">
+          <label for="country.code" [translate]="'label.country.code'"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="country.code"
+            [(ngModel)]="taxationCountry.code"
+            required
+            [disabled]="true"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="top-row-one-split">
+
+      <hr>
+      <div class="d-flex flex-column">
+        <div class="d-flex flex-row w-100">
+          <div class="d-flex flex-row w-100">
+          </div>
+          <div class="d-flex flex-row-reverse">
+            <a [routerLink]="['/countries/attributes-form/'+taxationCountry.id]">
+              <button class="btn btn-secondary" [translate]="'navigator.link.add'"></button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="page-header" [translate]="'list.attribute.list'"></div>
+      <div class="page-content">
+        <div class="table">
+          <div class="header">
+            <div class="header-column col-md-1" [translate]="'list.attribute.id'"></div>
+            <div class="header-column col-md-4" [translate]="'list.attribute.name'"></div>
+            <div class="header-column col-md-7" [translate]="'list.attribute.value'"></div>
+          </div>
+          <div class="item-row" *ngFor="let attribute of taxationCountry.attributes">
+            <div class="item-column col-md-1">{{ attribute.benchmarkAttributeId }}</div>
+            <div class="item-column col-md-4" *ngIf="language=='en'">
+              {{ attribute.name_english }}
+            </div>
+            <div class="item-column col-md-4" *ngIf="language=='pl'">
+              {{ attribute.name_polish }}
+            </div>
+            <div class="item-column col-md-4" *ngIf="language=='ua'">
+              {{ attribute.name_ukrainian }}
+            </div>
+            <div class="item-column col-md-7">
+              {{ attribute.value }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

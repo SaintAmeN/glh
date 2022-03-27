@@ -5,6 +5,7 @@ import {HttpClient} from "@angular/common/http";
 const EMPTY_COUNTRY: TaxationCountryDto = {
   id: 0,
   name: '',
+  code: '',
 };
 @Component({
   selector: 'app-countries-form',

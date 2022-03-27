@@ -19,12 +19,25 @@
       <div class="header">
         <div class="header-column col-md-1" [translate]="'list.country.id'"></div>
         <div class="header-column col-md-2" [translate]="'list.country.name'"></div>
-        <div class="header-column col-md-2 clr"></div>
+        <div class="header-column col-md-2" [translate]="'list.country.flag'"></div>
+        <div class="header-column col-md-2" [translate]="'list.country.code'"></div>
+        <div class="header-column col-md-2 clr">
+        </div>
       </div>
       <div class="item-row" *ngFor="let country of taxationCountries">
         <div class="item-column col-md-1">{{ country.id }}</div>
         <div class="item-column col-md-2">{{ country.name }}</div>
+        <div class="item-column col-md-2">
+          <img
+            class="paddless"
+            src="https://flagcdn.com/w20/{{country.code}}.png"
+            srcset="https://flagcdn.com/w40/{{country.code}}.png 2x"
+            width="20"
+            alt="South Africa">
+        </div>
+        <div class="item-column col-md-2">{{ country.code }}</div>
         <div class="item-column col-md-2 clr">
+          <a [routerLink]="['countries-details/'+country.id]" [translate]="'navigator.link.details'"></a>
         </div>
       </div>
     </div>
